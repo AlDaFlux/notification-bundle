@@ -365,7 +365,7 @@ class NotificationManager
             $notification->addNotifiableNotification($notifiableNotification);
 
             $event = new NotificationEvent($notification, $notifiable);
-            $this->dispatcher->dispatch(MgiletNotificationEvents::ASSIGNED, $event);
+            $this->dispatcher->dispatch($event,MgiletNotificationEvents::ASSIGNED);
         }
 
         $this->flush($flush);
