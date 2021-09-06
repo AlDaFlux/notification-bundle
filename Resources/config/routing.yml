@@ -1,0 +1,3 @@
+notifications:
+    resource: "@AldafluxNotificationBundle/Controller/"
+    type: annotation

@@ -1,0 +1,17 @@
+services:
+    aldaflux.notification:
+        class: Aldaflux\NotificationBundle\Manager\NotificationManager
+        arguments: ["@service_container", '@aldaflux.notifiable_discovery']
+        public: true
+
+    aldaflux.notifiable_discovery:
+        class: Aldaflux\NotificationBundle\NotifiableDiscovery
+        arguments: [ '@doctrine.orm.entity_manager', '@annotation_reader']
+        public: false
+
+    aldaflux.twig_extension:
+            class: Aldaflux\NotificationBundle\Twig\NotificationExtension
+            arguments: ['@aldaflux.notification', '@security.token_storage', '@twig', '@router']
+            public: false
+            tags:
+                - { name: twig.extension }

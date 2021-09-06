@@ -1,0 +1,22 @@
+{
+  "name" : "aldaflux/notification-bundle",
+  "license": "MIT",
+  "description" : "A simple Symfony 5 bundle for user notifications, forked from mgilet/notification-bundle",
+  "type" : "symfony-bundle",
+  "keywords" : [
+    "symfony notification bundle simple"
+  ],
+  "require" : {
+    "symfony/framework-bundle": "^4.3 || ^5.0",
+    "twig/twig": "*",
+    "doctrine/doctrine-bundle": "*"
+  },
+  "autoload" : {
+    "psr-4": { "Aldaflux\\NotificationBundle\\": "" }
+  },
+  "extra" : {
+    "branch-alias" : {
+      "dev-master" : "5.0-dev"
+    }
+  }
+}
